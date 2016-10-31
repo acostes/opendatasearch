@@ -1,0 +1,43 @@
+{
+  "name": "opendatasearch",
+  "version": "1.0.0",
+  "description": "Search and visualize data accross mutiple sources",
+  "main": "app.js",
+  "scripts": {
+    "lint": "eslint src public/js api app.js",
+    "import": "node src/import/*.js"
+  },
+  "bin": {
+    "eslint": "./node_modules/.bin/eslint"
+  },
+  "keywords": [
+    "node",
+    "elasticsearch",
+    "opendata"
+  ],
+  "author": "Arnaud Costes <arnaud.costes@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "elasticsearch": "^11.0.1",
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "nconf": "^0.8.4",
+    "request": "^2.75.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.9.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.3.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-bower": "0.0.13",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.0",
+    "gulp-filesize": "0.0.6",
+    "gulp-less": "^3.1.0",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-uglify": "^2.0.0",
+    "run-sequence": "^1.2.2"
+  }
+}

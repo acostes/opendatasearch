@@ -1,0 +1,32 @@
+<div class="col-xs-12 col-sm-9">
+    <div ng-repeat="movie in result.hits.hits">
+        <div class="col-xs-3">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="thumbnail">
+                      <img src="{{movie._source.medium_cover_image}}" alt="{{movie._source.title}}" width="170" height="255">
+                      <div class="caption">
+                        <p>
+                            <span class="label label-default">{{movie._source.year}}</span>
+                            <span class="label label-primary">{{movie._source.rating}} / 10</span>
+                            <span class="label label-success">{{movie._source.language}}</span>
+                        </p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+    <div ng-repeat="(type, values) in aggregations">
+        <div class="alert alert-info" role="alert">{{ type }}</div>
+        <ul class="list-group">
+            <li ng-repeat="value in values.buckets" class="list-group-item" ng-click="searchData(value.key)">
+              <span class="badge">{{ value.doc_count }}</span>
+              <a href="/#/yts">{{ value.key }}</a>
+            </li>
+        </ul>
+    </div>
+</div>
